@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Comic Sans MS', cursive;
+    overflow:hidden;
+    height:100vh;
+    background:linear-gradient(135deg,#ff5f9e,#ff89c6,#ffd6ea);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+#surpriseBtn{
+    padding:20px 40px;
+    border:none;
+    border-radius:50px;
+    font-size:25px;
+    background:white;
+    color:#ff2f75;
+    cursor:pointer;
+    transition:0.4s;
+    font-weight:bold;
+}
+
+#surpriseBtn:hover{
+    transform:scale(1.1);
+}
+
+.hidden{
+    display:none;
+}
+
+.photo{
+    width:300px;
+    border-radius:25px;
+    border:8px solid white;
+    box-shadow:0px 0px 30px white;
+}
+
+.loveText{
+    margin-top:20px;
+    font-size:40px;
+    animation:pulse 1s infinite;
+}
+
+.cuteMsg{
+    margin-top:15px;
+    font-size:25px;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.08);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+.hearts::before{
+    content:"❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+    position:absolute;
+    width:100%;
+    font-size:35px;
+    animation:floatHearts 8s linear infinite;
+}
+
+@keyframes floatHearts{
+    0%{
+        transform:translateY(100vh);
+    }
+    100%{
+        transform:translateY(-120vh);
+    }
+}
